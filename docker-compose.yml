@@ -28,7 +28,9 @@ services:
   metadata-service:
     build: ./metadata-service
     networks:
-      - private_net
+      private_net:
+        aliases:
+          - 123.5.6.7
     hostname: metadata-api
     expose:
       - "80"
